@@ -18,14 +18,14 @@ int main(void) {
 
     while (true) {
         scanf("%s", command);
-        if (strcmp(command, "목록보기") == 0) {
+        if (strcmp(command, "목록보기") == 0) { //사용자가 "목록보기"를 타이핑 했을 경우 (저장된 인원 목록 출력)
             printf("이름\t전화번호\t주소\t생일\n");
             printf("====================================\n");
             for (int i = 0; i < currentStudent; i++) {
                 printf("%s\t%s\t%s\t%s\n", students[i].name, students[i].phone, students[i].address, students[i].birthday);
             }
         }
-        else if (strcmp(command, "추가하기") == 0) {
+        else if (strcmp(command, "추가하기") == 0) { //사용자가 "추가하기"를 타이핑 했을 경우 (인원 정보 추가)
             printf("이름 : ");
             scanf("%s", students[currentStudent].name);
             printf("전화번호 : ");
@@ -36,7 +36,7 @@ int main(void) {
             scanf("%s", students[currentStudent].birthday);
             currentStudent++;
         }
-        else if (strcmp(command, "탐색하기") == 0) {
+        else if (strcmp(command, "탐색하기") == 0) { //사용자가 "탐색하기"를 타이핑 했을 경우 (사용자가 원하는 인원정보 검색 가능)
             int index;// 탐색할 학생의 인덱스
             char tempName[100];
             printf("탐색할 학생의 이름 : ");
@@ -49,7 +49,7 @@ int main(void) {
             }
             printf("이름 : %s\n전화번호 : %s\n주소 : %s\n생일 : %s\n", students[index].name, students[index].phone, students[index].address, students[index].birthday);
         }
-        else if (strcmp(command, "삭제하기") == 0) {
+        else if (strcmp(command, "삭제하기") == 0) { //사용자가 "삭제하기"를 타이핑 했을 경우 (사용자가 삭제하고 싶은 인원의 이름을 타이핑 하면 해당 인원의 목록이 사라지며 인원목록들이 한 칸씩 당겨짐)
             char nameToDelete[100];
             printf("삭제할 학생 이름 : ");
             scanf("%s", nameToDelete);
