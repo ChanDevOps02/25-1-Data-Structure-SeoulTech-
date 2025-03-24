@@ -3,4 +3,4 @@ project(4__17 C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(4__17 main.c)
+add_executable(4__17 studentScore.c)
